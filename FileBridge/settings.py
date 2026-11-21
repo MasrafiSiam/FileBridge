@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-=g5t7%ptrq++d=7w1d-t&!*kh)*00wy1q5wpf$8r4^23gc9o&%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1",
+                "localhost",
+                "econometrical-tubularly-ingeborg.ngrok-free.dev"
+                ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://econometrical-tubularly-ingeborg.ngrok-free.dev",
+]
 
 # Application definition
 

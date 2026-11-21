@@ -14,6 +14,8 @@
 
 <body>
 
+    {% csrf_token %}
+
     <main class="container">
 
         <header class="header">
@@ -47,7 +49,7 @@
                 >
 
                 <p class="supported-formats">
-                    Supported formats: DOCX, PPTX
+                    Supported formats: DOCX, PPTX (Maximum 25 MB)
                 </p>
 
             </div>

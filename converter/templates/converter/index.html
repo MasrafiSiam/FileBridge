@@ -1,0 +1,76 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FileBridge — Document Converter</title>
+
+    <link rel="stylesheet" href="{% static 'converter/css/style.css' %}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <a href="/" class="logo">FileBridge<span>.</span></a>
+            <p>Simple document conversion</p>
+        </header>
+
+        <section class="hero">
+            <h1>Documents to PDF.<br>Without the hassle.</h1>
+            <p>Convert your Word and PowerPoint documents into PDF files.</p>
+        </section>
+
+        <section class="upload-section">
+
+            <div class="upload-box" id="drop-area">
+
+                <div class="upload-icon">↑</div>
+
+                <h2>Drop your document here</h2>
+                <p>or</p>
+
+                <label for="file-input" class="browse-button">
+                    Browse files
+                </label>
+
+                <input
+                    type="file"
+                    id="file-input"
+                    accept=".docx,.pptx"
+                    hidden
+                >
+
+                <p class="supported-formats">
+                    Supported formats: DOCX, PPTX
+                </p>
+
+            </div>
+
+            <div class="file-info" id="file-info" hidden>
+                <span id="file-name"></span>
+                <button type="button" id="remove-file">Remove</button>
+            </div>
+
+            <button type="button" id="convert-button" disabled>
+                Convert to PDF
+            </button>
+
+        </section>
+
+        <footer>
+            <p>Your documents are processed temporarily, not stored permanently.</p>
+            <p>© 2026 FileBridge</p>
+        </footer>
+
+    </main>
+
+    <script src="{% static 'converter/js/app.js' %}"></script>
+
+</body>
+</html>
